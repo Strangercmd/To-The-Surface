@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cchgticun855g"]
+
+[ext_resource type="Texture2D" uid="uid://2efn7f51cboo" path="res://OIP.jpg" id="1_ff6oa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pm4mq"]
+texture = ExtResource("1_ff6oa")
+
+[node name="Background" type="Panel"]
+offset_left = -894.0
+offset_top = -542.0
+offset_right = 2424.0
+offset_bottom = 1585.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pm4mq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1474, 861)

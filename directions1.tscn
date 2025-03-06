@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbgg2bifrrs8n"]
+
+[ext_resource type="Script" path="res://animated_text.gd" id="1_jp48c"]
+[ext_resource type="FontFile" uid="uid://b6pxwbj20fm2r" path="res://PixelOperator8.ttf" id="2_j4kvg"]
+
+[sub_resource type="Animation" id="Animation_1nk7p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_48vai"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 0]
+}
+
+[sub_resource type="Animation" id="Animation_6ynjl"]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m6don"]
+_data = {
+"RESET": SubResource("Animation_1nk7p"),
+"hide": SubResource("Animation_48vai"),
+"show": SubResource("Animation_6ynjl")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deald"]
+size = Vector2(85.9995, 134)
+
+[node name="Directions1" type="Node2D"]
+
+[node name="AnimatedText" type="Node2D" parent="."]
+script = ExtResource("1_jp48c")
+
+[node name="Label" type="Label" parent="AnimatedText"]
+offset_top = 142.0
+offset_right = 1350.0
+offset_bottom = 763.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_j4kvg")
+theme_override_font_sizes/font_size = 120
+text = "Use A and D
+To Move 
+Left and Right 
+"
+horizontal_alignment = 1
+uppercase = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedText"]
+libraries = {
+"": SubResource("AnimationLibrary_m6don")
+}
+
+[node name="Area2D" type="Area2D" parent="AnimatedText"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedText/Area2D"]
+position = Vector2(65.0003, 181)
+shape = SubResource("RectangleShape2D_deald")
+
+[connection signal="body_entered" from="AnimatedText/Area2D" to="AnimatedText" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="AnimatedText/Area2D" to="AnimatedText" method="_on_area_2d_body_exited"]

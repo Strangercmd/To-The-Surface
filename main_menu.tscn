@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckffla5vdxn62"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_sv1q5"]
+[ext_resource type="Texture2D" uid="uid://dy2t1s3vd884p" path="res://goofer doofer.jpeg" id="2_ex3ns"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u73g0"]
+texture = ExtResource("2_ex3ns")
+modulate_color = Color(0.423651, 0.423651, 0.423651, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sv1q5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.285
+anchor_right = 0.536
+anchor_bottom = 0.5
+offset_top = 139.32
+offset_right = -41.472
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_u73g0")

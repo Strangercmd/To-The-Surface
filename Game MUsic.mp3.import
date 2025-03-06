@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fadp8awrygw"
+path="res://.godot/imported/Game MUsic.mp3-fdcc05d02b4bb1f2ab7037194e4f24d4.mp3str"
+
+[deps]
+
+source_file="res://Game MUsic.mp3"
+dest_files=["res://.godot/imported/Game MUsic.mp3-fdcc05d02b4bb1f2ab7037194e4f24d4.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
