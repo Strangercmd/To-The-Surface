@@ -1,6 +1,7 @@
 
 [recent_files]
 
+
 scenes=["res://background.tscn", "res://boulder.tscn", "res://directions2.tscn", "res://directions1.tscn", "res://main.tscn", "res://main_menu.tscn", "res://player.tscn", "res://canvas_modulate.tscn", "res://options.tscn"]
 scripts=["Timer", "Area2D", "res://background.gd", "res://cracked_rocks.gd", "res://falling_ground.gd", "res://node_2d.gd", "res://boulder.gd", "res://animated_text2.gd", "res://directions_1.gd"]
 
@@ -88,4 +89,4 @@ advanced_mode=false
 13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:1/0 = 0
 14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-15:1/0 = 0  
+15:1/0 = 0
