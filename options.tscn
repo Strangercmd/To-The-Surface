@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cchgticun855g"]
+[gd_scene load_steps=3 format=4 uid="uid://cchgticun855g"]
 
-[ext_resource type="Texture2D" uid="uid://2efn7f51cboo" path="res://OIP.jpg" id="1_ff6oa"]
+[ext_resource type="Texture2D" uid="uid://2efn7f51cboo" path="res://OIP.jpg" id="1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pm4mq"]
-texture = ExtResource("1_ff6oa")
+texture = ExtResource("1")
 
 [node name="Background" type="Panel"]
 offset_left = -894.0

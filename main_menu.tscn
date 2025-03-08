@@ -1,11 +1,118 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckffla5vdxn62"]
+[gd_scene load_steps=17 format=3 uid="uid://de6lot8bc3h34"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_sv1q5"]
-[ext_resource type="Texture2D" uid="uid://dy2t1s3vd884p" path="res://goofer doofer.jpeg" id="2_ex3ns"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dy2t1s3vd884p" path="res://goofer doofer.jpeg" id="2"]
+[ext_resource type="FontFile" uid="uid://b6pxwbj20fm2r" path="res://PixelOperator8.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://bqul0fabf4lhm" path="res://PixelOperator8-Bold.ttf" id="4"]
+[ext_resource type="AudioStream" uid="uid://fadp8awrygw" path="res://Game MUsic.mp3" id="5"]
+[ext_resource type="Texture2D" uid="uid://2efn7f51cboo" path="res://OIP.jpg" id="6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u73g0"]
-texture = ExtResource("2_ex3ns")
+texture = ExtResource("2")
 modulate_color = Color(0.423651, 0.423651, 0.423651, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0alk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5twd"]
+bg_color = Color(0.019376, 0.384392, 0.468575, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10h12"]
+bg_color = Color(0.0100341, 0.275049, 0.338252, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cj0p"]
+bg_color = Color(0.0637863, 0.666106, 0.804084, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Theme" id="Theme_dj1r3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_u17lg"]
+
+[sub_resource type="Animation" id="Animation_2a7hn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.19322, 2.88462)]
+}
+
+[sub_resource type="Animation" id="Animation_uuecn"]
+resource_name = "fade"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.966667, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.933333, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-63.7774, 10.8113), Vector2(0.005054, -0.00374508)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_icadt"]
+_data = {
+"RESET": SubResource("Animation_2a7hn"),
+"fade": SubResource("Animation_uuecn")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -14,18 +121,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sv1q5")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.285
-anchor_right = 0.536
-anchor_bottom = 0.5
-offset_top = 139.32
-offset_right = -41.472
-grow_horizontal = 2
-grow_vertical = 2
+script = ExtResource("1")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -35,3 +131,105 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_u73g0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -139.0
+offset_right = 192.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 1, 0.27451, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0alk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i5twd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h12")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3cj0p")
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_dj1r3")
+theme_override_colors/font_hover_color = Color(0.784648, 0.737525, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0alk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i5twd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h12")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3cj0p")
+text = "Credits
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.827451, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0alk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i5twd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_10h12")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3cj0p")
+text = "Exit"
+
+[node name="Label3" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 346.0
+offset_top = 43.0
+offset_right = 786.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.123001, 0.512301, 0.609921, 1)
+theme_override_colors/font_shadow_color = Color(8.08597e-06, 0.856208, 0.856366, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 64
+text = "To The 
+Surface"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5")
+volume_db = 10.735
+autoplay = true
+
+[node name="Fade" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_u17lg")
+position = Vector2(562, 376)
+scale = Vector2(4.19322, 2.88462)
+texture = ExtResource("6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
+libraries = {
+"": SubResource("AnimationLibrary_icadt")
+}
+autoplay = "fade"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

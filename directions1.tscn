@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbgg2bifrrs8n"]
+[gd_scene load_steps=8 format=4 uid="uid://bbgg2bifrrs8n"]
 
-[ext_resource type="Script" path="res://animated_text.gd" id="1_jp48c"]
-[ext_resource type="FontFile" uid="uid://b6pxwbj20fm2r" path="res://PixelOperator8.ttf" id="2_j4kvg"]
+[ext_resource type="Script" path="res://animated_text.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://b6pxwbj20fm2r" path="res://PixelOperator8.ttf" id="2"]
 
 [sub_resource type="Animation" id="Animation_1nk7p"]
-length = 0.001
+length = 0.0010000000474974513
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,7 +61,7 @@ size = Vector2(85.9995, 134)
 [node name="Directions1" type="Node2D"]
 
 [node name="AnimatedText" type="Node2D" parent="."]
-script = ExtResource("1_jp48c")
+script = ExtResource("1")
 
 [node name="Label" type="Label" parent="AnimatedText"]
 offset_top = 142.0
@@ -70,7 +70,7 @@ offset_bottom = 763.0
 scale = Vector2(0.1, 0.1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_j4kvg")
+theme_override_fonts/font = ExtResource("2")
 theme_override_font_sizes/font_size = 120
 text = "Use A and D
 To Move 

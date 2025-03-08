@@ -1,0 +1,50 @@
+GDRE Tools v0.9.0-beta.4
+Windows 10.0.19045, NVIDIA GeForce GTX 1650 Ti, opengl3
+Opening file: ~/\Downloads\To The Surface.exe
+Verified 90 files, no errors detected!
+Extracted 90 files, no errors detected!
+WARNING: Converting lossy imports, you may lose fidelity for indicated assets when re-importing upon loading the project
+   at: ImportExporter::_export_imports (modules\gdsdecomp\utility\import_exporter.cpp:241)
+Script version 4.3.0-stable (rev 0x77af6ca) detected
+Exporting resources in parallel...
+Saved project config project.godot.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     9
+Failed scripts:                         0
+Imported resources for export session:  34
+Successfully converted:                 34
+Lossy:                                  5
+Rewrote metadata:                       22
+Non-importable conversions:             1
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+The following files were converted from an import that was stored lossy.
+You may lose fidelity when re-importing these files upon loading the project.
+res://.godot/imported/783d1b831a57419391f42b99bc35c3c0.webp-af73250db5cd78426602595ccc973793.ctex to res://783d1b831a57419391f42b99bc35c3c0.webp
+res://.godot/imported/IMG_0123.jpg-cf7bda685637402e1e7fb77b563f2c81.ctex to res://IMG_0123.jpg
+res://.godot/imported/OIP.jpg-4c33fd4baa18e7313ecd31ebec956739.ctex to res://OIP.jpg
+res://.godot/imported/goofer doofer.jpeg-5a169920208d7c5145eabd5f2b9ffa23.ctex to res://goofer doofer.jpeg
+res://.godot/imported/pixel sky.jpg-d54384a36ba33ee438dc7df3e84acc8f.ctex to res://pixel sky.jpg
+------
+
+The following files were converted and saved to a non-original path, but did not have their import data rewritten.
+These files will not be re-imported when loading the project.
+res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex to res://.assets/icon.png
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.3.0 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+
